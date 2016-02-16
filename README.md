@@ -8,20 +8,33 @@ A simple LinkedIn profile scraper for nodejs, based on original [linkedin-scrape
     npm install linkedin-scraper2 --save
 ```
 
-<h1> Example Usage </h1>
+### Usage
 
-<div class="highlight highlight-js"><pre><span class="pl-c">// Scrape a linkedin profile for the public contents</span>
-<span class="pl-s">var</span> linkedinScraper <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">"</span>linkedin-scraper<span class="pl-pds">"</span></span>);
+#### with callback function
+```javascript
+// Scrape a linkedin profile for the public contents
+var linkedinScraper = require('linkedin-scraper');
+var url = 'https://www.linkedin.com/in/[user]';
 
-linkedinScraper(url,
-  <span class="pl-st">function</span> (<span class="pl-vpf">linkedinObject</span>) {
-    <span class="pl-en">console</span><span class="pl-s3">.log</span>(<span class="pl-s1">linkedinObject</span>);
-  }
-);</pre></div>
+linkedinScraper(url, function(profile) {
+    console.log(profile);
+});
+```
 
-<h1> Sample Output </h1>
+#### with promise
+```javascript
+// Scrape a linkedin profile for the public contents
+var linkedinScraper = require('linkedin-scraper');
+var url = 'https://www.linkedin.com/in/[user]';
 
-http://pastebin.com/jipY0hzj
+linkedinScraper(url).then(function(profile) {
+    console.log(profile);
+});
+```
+
+#### output
+
+http://pastebin.com/629RHwTa
 
 [npm-url]: https://npmjs.org/package/linkedin-scraper2
 [npm-image]: http://img.shields.io/npm/v/linkedin-scraper2.svg
