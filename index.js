@@ -1,10 +1,10 @@
 var jsdom = require("jsdom");
-var ProfileClass = require("./data-containers/profile"),
-    Experience = require("./data-containers/experience"),
-    Honors = require("./data-containers/honors"),
-    Project = require("./data-containers/projects"),
-    Education = require("./data-containers/education"),
-    Language = require("./data-containers/language");
+var ProfileClass = require("./lib/profile"),
+    Experience = require("./lib/experience"),
+    Honors = require("./lib/honors"),
+    Project = require("./lib/projects"),
+    Education = require("./lib/education"),
+    Language = require("./lib/language");
 
 function getProfile(linkedInURL, callback) {
     jsdom.env({
