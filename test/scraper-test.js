@@ -26,8 +26,10 @@ describe('<LinkedIn Scraper>', function() {
 
     it('get profile with callback', function(done) {
 
-        linkedinScraper(url, function (profile) {
+        linkedinScraper(url, function (err, profile) {
             //console.log(JSON.stringify(profile, null, '   '));
+
+            should(err).be.not.ok();
 
             validateProfile(profile);
             return done();

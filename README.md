@@ -16,8 +16,12 @@ A simple LinkedIn profile scraper for nodejs, based on original [linkedin-scrape
 var linkedinScraper = require('linkedin-scraper');
 var url = 'https://www.linkedin.com/in/[user]';
 
-linkedinScraper(url, function(profile) {
-    console.log(profile);
+linkedinScraper(url, function(err, profile) {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(profile);
+    }
 });
 ```
 
@@ -27,9 +31,13 @@ linkedinScraper(url, function(profile) {
 var linkedinScraper = require('linkedin-scraper');
 var url = 'https://www.linkedin.com/in/[user]';
 
-linkedinScraper(url).then(function(profile) {
-    console.log(profile);
-});
+linkedinScraper(url)
+    .then(function(profile) {
+        console.log(profile);
+    })
+    .catch(function(err) {
+        console.log(err);
+    });
 ```
 
 #### output

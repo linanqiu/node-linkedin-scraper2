@@ -3,9 +3,7 @@ var jsdom = require('jsdom'),
 
 module.exports = function (originalUrl, callback) {
     var deferred = Q.defer();
-    if (!callback) {
-        callback = deferred.resolve;
-    }
+
 
     var profileFactory = require('./lib/profile');
     var linkedInURL = originalUrl.replace(/[a-z]*\.linkedin/, 'www.linkedin');
@@ -23,12 +21,20 @@ module.exports = function (originalUrl, callback) {
         tunnel: process.env.PROXY_HOST ? false : undefined,
         done: function (errors, window) {
             if (errors) {
-                callback(profileFactory());
+                if (callback) {
+                    callback(errors);
+                } else {
+                    deferred.reject(errors);
+                }
             } else {
                 var profile = profileFactory(window);
                 profile.publicProfileUrl = originalUrl;
 
-                callback(profile);
+                if (callback) {
+                    callback(null, profile);
+                } else {
+                    deferred.resolve(profile);
+                }
             }
         }
     });
