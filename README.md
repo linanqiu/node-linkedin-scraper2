@@ -26,14 +26,14 @@ http://pastebin.com/jipY0hzj
 [npm-url]: https://npmjs.org/package/linkedin-scraper2
 [npm-image]: http://img.shields.io/npm/v/linkedin-scraper2.svg
 
-[travis-url]: https://travis-ci.org/danieljoppi/linkedin-scraper2
-[travis-image]: https://img.shields.io/travis/danieljoppi/linkedin-scraper2.svg
+[travis-url]: https://travis-ci.org/danieljoppi/node-linkedin-scraper2
+[travis-image]: https://img.shields.io/travis/danieljoppi/node-linkedin-scraper2.svg
 
-[coveralls-url]: https://coveralls.io/r/danieljoppi/linkedin-scraper2
-[coveralls-image]: http://img.shields.io/coveralls/danieljoppi/linkedin-scraper2/master.svg
+[coveralls-url]: https://coveralls.io/r/danieljoppi/node-linkedin-scraper2
+[coveralls-image]: http://img.shields.io/coveralls/danieljoppi/node-linkedin-scraper2/master.svg
 
-[david-url]: https://david-dm.org/danieljoppi/linkedin-scraper2
-[david-image]: https://david-dm.org/danieljoppi/linkedin-scraper2.svg
+[david-url]: https://david-dm.org/danieljoppi/node-linkedin-scraper2
+[david-image]: https://david-dm.org/danieljoppi/node-linkedin-scraper2.svg
 
-[david-url-dev]: https://david-dm.org/danieljoppi/linkedin-scraper2#info=devDependencies
-[david-image-dev]: https://david-dm.org/danieljoppi/linkedin-scraper2/dev-status.svg
+[david-url-dev]: https://david-dm.org/danieljoppi/node-linkedin-scraper2#info=devDependencies
+[david-image-dev]: https://david-dm.org/danieljoppi/node-linkedin-scraper2/dev-status.svg
