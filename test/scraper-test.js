@@ -13,6 +13,7 @@ describe('<LinkedIn Scraper>', function() {
         should(profile).have.property('headline', 'Software Architect na Rospo GeoTech');
         should(profile).have.property('location', 'Florianópolis, Santa Catarina, Brazil');
         should(profile).have.property('summary').be.ok();
+        should(profile).have.property('industry').be.equal('Program Development');
         should(profile).have.property('languages').length(5);
         should(profile).have.property('skills').length(45);
         should(profile).have.property('currentPositions').length(3);
@@ -25,7 +26,6 @@ describe('<LinkedIn Scraper>', function() {
     }
 
     it('get profile with callback', function(done) {
-
         linkedinScraper(url, function (err, profile) {
             //console.log(JSON.stringify(profile, null, '   '));
 
@@ -38,7 +38,6 @@ describe('<LinkedIn Scraper>', function() {
 
     it('get profile with promise', function(done) {
         linkedinScraper(url).then(function (profile) {
-
             validateProfile(profile);
             return done();
         });
