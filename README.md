@@ -1,5 +1,4 @@
-# node-linkedin-scraper2 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
+# node-linkedin-scraper2
 
 A simple LinkedIn profile scraper for nodejs, based on original [linkedin-scraper](https://github.com/aadisriram/nodejs-linkedin-scraper).
 
@@ -13,7 +12,7 @@ A simple LinkedIn profile scraper for nodejs, based on original [linkedin-scrape
 #### with callback function
 ```javascript
 // Scrape a linkedin profile for the public contents
-var linkedinScraper = require('linkedin-scraper');
+var linkedinScraper = require('linkedin-scraper2');
 var url = 'https://www.linkedin.com/in/[user]';
 
 linkedinScraper(url, function(err, profile) {
@@ -28,7 +27,7 @@ linkedinScraper(url, function(err, profile) {
 #### with promise
 ```javascript
 // Scrape a linkedin profile for the public contents
-var linkedinScraper = require('linkedin-scraper');
+var linkedinScraper = require('linkedin-scraper2');
 var url = 'https://www.linkedin.com/in/[user]';
 
 linkedinScraper(url)
